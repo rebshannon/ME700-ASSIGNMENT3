@@ -27,7 +27,4 @@ Set up the conda environment and test that the code is functioning. Note: The en
     ```bash
     pip install git+https://github.com/Lejeune-Lab-Graduate-Course-Materials/finite-element-analysis
     ```
-6. Test the code with pytest. This command returns code coverage for all files in the directory. 
-    ```bash
-    pytest -v --cov=src  --cov-report term-missing
-    ```
+
