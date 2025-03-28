@@ -45,11 +45,21 @@ Note: Plotting info in *pre_process_demo_functions.py* is not included in this o
 
 ### Outline of *solver.py*
 
-__for__ number of iterations
-|    __while__ error < tolerance
+__for__ number of iterations  
+|    Find load factor = iteration number / number of iterations
+|    __while__ error < tolerance  
 |    |    Find global stiffness matrix with *assemble_global.py*  
 |    |    |    Find local element stiffness for each element using *local_element.py*  
 |    |    |    Aasemble global stiffnesss matrix.  
+|    |    Find global traction matrix with *assemble_global.py*  (calls *local_element.py*).  
+|    |    Find R = loadfactor*F - global residual *******************
+|    |    Assign boundary displacements (e.g. fixed nodes don't move).  
+|    |    Solve for displacement \delta = K-1R  
+|    |    Add displacement to total node displacement.  
+|    |    Find error.  
+|    Add node displacement to frame displacement list
+
+
             
 
 
