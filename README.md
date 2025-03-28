@@ -30,7 +30,7 @@ Set up the conda environment and test that the code is functioning. Note: The en
 
 ## Overview of FEA Code
 
-![alt text](https://raw.githubusercontent.com/rebshannon/ME700-ASSIGNMENT3/blob/feaCodeMap.png)
+![alt text](feaCodeMap.png)
 
 ### Outline of *full_code_example_1.py*
 1. Define element type, number of degrees of freedom, domain size (for rectangle), number of elements, and prescribed stretch (lambda).  
