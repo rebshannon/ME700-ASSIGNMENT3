@@ -30,6 +30,8 @@ Set up the conda environment and test that the code is functioning. Note: The en
 
 ## Overview of FEA Code
 
+![alt text](https://github.com/rebshannon/ME700-ASSIGNMENT3/blob/feaCodeMap.png?raw=true)
+
 ### Outline of *full_code_example_1.py*
 1. Define element type, number of degrees of freedom, domain size (for rectangle), number of elements, and prescribed stretch (lambda).  
 2. Call *pre_process.py* to generate rectangular mesh.  
@@ -52,7 +54,7 @@ __for__ number of iterations
 |    |    |    Find local element stiffness for each element using *local_element.py*  
 |    |    |    Aasemble global stiffnesss matrix.  
 |    |    Find global traction matrix with *assemble_global.py*  (calls *local_element.py*).  
-|    |    Find R = loadfactor*F - global residual *******************
+|    |    Find R = loadfactor*F - global residual *******************  
 |    |    Assign boundary displacements (e.g. fixed nodes don't move).  
 |    |    Solve for displacement \delta = K-1R  
 |    |    Add displacement to total node displacement.  
